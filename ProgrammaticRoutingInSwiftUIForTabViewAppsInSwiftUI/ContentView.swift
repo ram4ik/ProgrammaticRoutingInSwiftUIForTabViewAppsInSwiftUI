@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Observation
 
 enum AppScreen: Hashable, Identifiable, CaseIterable {
     case backyard
@@ -47,21 +48,38 @@ enum BirdRoute: Hashable {
     case detail(String)
 }
 
+enum PlantRoute {
+    case home
+    case detail
+}
+
 struct BirdDetailScreen: View {
     let name: String
     
     var body: some View {
-        Text(name)
+        Button("Bird Photo Screen") {
+            
+        }
     }
 }
 
+@Observable
+class Router {
+    var birdRoutes: [BirdRoute] = []
+    var plantRoutes: [PlantRoute] = []
+}
+
 struct BirdsNavigationStack: View {
-    @State private var routes: [BirdRoute] = []
+    
+    @Environment(Router.self) private var router
     
     var body: some View {
-        NavigationStack(path: $routes) {
+        
+        @Bindable var router = router
+        
+        NavigationStack(path: $router.birdRoutes) {
             Button("Go to bird detail") {
-                routes.append(.detail("Sparrow"))
+                router.birdRoutes.append(.detail("Sparrow"))
             }.navigationDestination(for: BirdRoute.self) { route in
                 switch route {
                 case .home:
@@ -112,4 +130,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+        .environment(Router())
 }
