@@ -14,6 +14,15 @@
 		52CFC9302B47F0F1006BA84E /* ProgrammaticRoutingInSwiftUIForTabViewAppsInSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CFC92F2B47F0F1006BA84E /* ProgrammaticRoutingInSwiftUIForTabViewAppsInSwiftUITests.swift */; };
 		52CFC93A2B47F0F1006BA84E /* ProgrammaticRoutingInSwiftUIForTabViewAppsInSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CFC9392B47F0F1006BA84E /* ProgrammaticRoutingInSwiftUIForTabViewAppsInSwiftUIUITests.swift */; };
 		52CFC93C2B47F0F1006BA84E /* ProgrammaticRoutingInSwiftUIForTabViewAppsInSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CFC93B2B47F0F1006BA84E /* ProgrammaticRoutingInSwiftUIForTabViewAppsInSwiftUIUITestsLaunchTests.swift */; };
+		52CFC9492B4808F1006BA84E /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CFC9482B4808F1006BA84E /* Router.swift */; };
+		52CFC94B2B480921006BA84E /* AppScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CFC94A2B480921006BA84E /* AppScreen.swift */; };
+		52CFC94E2B480973006BA84E /* BirdRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CFC94D2B480973006BA84E /* BirdRoute.swift */; };
+		52CFC9502B48098A006BA84E /* PlantRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CFC94F2B48098A006BA84E /* PlantRoute.swift */; };
+		52CFC9522B48099C006BA84E /* BackyardRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CFC9512B48099C006BA84E /* BackyardRoute.swift */; };
+		52CFC9542B4809BA006BA84E /* BirdDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CFC9532B4809BA006BA84E /* BirdDetailScreen.swift */; };
+		52CFC9572B4809E8006BA84E /* BirdsNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CFC9562B4809E8006BA84E /* BirdsNavigationStack.swift */; };
+		52CFC9592B480A08006BA84E /* BackyardNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CFC9582B480A08006BA84E /* BackyardNavigationStack.swift */; };
+		52CFC95C2B480A47006BA84E /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CFC95B2B480A47006BA84E /* AppTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +53,15 @@
 		52CFC9352B47F0F1006BA84E /* ProgrammaticRoutingInSwiftUIForTabViewAppsInSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProgrammaticRoutingInSwiftUIForTabViewAppsInSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52CFC9392B47F0F1006BA84E /* ProgrammaticRoutingInSwiftUIForTabViewAppsInSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammaticRoutingInSwiftUIForTabViewAppsInSwiftUIUITests.swift; sourceTree = "<group>"; };
 		52CFC93B2B47F0F1006BA84E /* ProgrammaticRoutingInSwiftUIForTabViewAppsInSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammaticRoutingInSwiftUIForTabViewAppsInSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		52CFC9482B4808F1006BA84E /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		52CFC94A2B480921006BA84E /* AppScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreen.swift; sourceTree = "<group>"; };
+		52CFC94D2B480973006BA84E /* BirdRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdRoute.swift; sourceTree = "<group>"; };
+		52CFC94F2B48098A006BA84E /* PlantRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantRoute.swift; sourceTree = "<group>"; };
+		52CFC9512B48099C006BA84E /* BackyardRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackyardRoute.swift; sourceTree = "<group>"; };
+		52CFC9532B4809BA006BA84E /* BirdDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdDetailScreen.swift; sourceTree = "<group>"; };
+		52CFC9562B4809E8006BA84E /* BirdsNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdsNavigationStack.swift; sourceTree = "<group>"; };
+		52CFC9582B480A08006BA84E /* BackyardNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackyardNavigationStack.swift; sourceTree = "<group>"; };
+		52CFC95B2B480A47006BA84E /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +112,16 @@
 		52CFC91D2B47F0F0006BA84E /* ProgrammaticRoutingInSwiftUIForTabViewAppsInSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				52CFC95A2B480A37006BA84E /* Views */,
+				52CFC9552B4809DA006BA84E /* NavigationStacks */,
+				52CFC94C2B480962006BA84E /* Routes */,
 				52CFC91E2B47F0F0006BA84E /* ProgrammaticRoutingInSwiftUIForTabViewAppsInSwiftUIApp.swift */,
 				52CFC9202B47F0F0006BA84E /* ContentView.swift */,
 				52CFC9222B47F0F1006BA84E /* Assets.xcassets */,
 				52CFC9242B47F0F1006BA84E /* Preview Content */,
+				52CFC9482B4808F1006BA84E /* Router.swift */,
+				52CFC94A2B480921006BA84E /* AppScreen.swift */,
+				52CFC9532B4809BA006BA84E /* BirdDetailScreen.swift */,
 			);
 			path = ProgrammaticRoutingInSwiftUIForTabViewAppsInSwiftUI;
 			sourceTree = "<group>";
@@ -125,6 +149,33 @@
 				52CFC93B2B47F0F1006BA84E /* ProgrammaticRoutingInSwiftUIForTabViewAppsInSwiftUIUITestsLaunchTests.swift */,
 			);
 			path = ProgrammaticRoutingInSwiftUIForTabViewAppsInSwiftUIUITests;
+			sourceTree = "<group>";
+		};
+		52CFC94C2B480962006BA84E /* Routes */ = {
+			isa = PBXGroup;
+			children = (
+				52CFC94D2B480973006BA84E /* BirdRoute.swift */,
+				52CFC94F2B48098A006BA84E /* PlantRoute.swift */,
+				52CFC9512B48099C006BA84E /* BackyardRoute.swift */,
+			);
+			path = Routes;
+			sourceTree = "<group>";
+		};
+		52CFC9552B4809DA006BA84E /* NavigationStacks */ = {
+			isa = PBXGroup;
+			children = (
+				52CFC9562B4809E8006BA84E /* BirdsNavigationStack.swift */,
+				52CFC9582B480A08006BA84E /* BackyardNavigationStack.swift */,
+			);
+			path = NavigationStacks;
+			sourceTree = "<group>";
+		};
+		52CFC95A2B480A37006BA84E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				52CFC95B2B480A47006BA84E /* AppTabView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +308,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52CFC9522B48099C006BA84E /* BackyardRoute.swift in Sources */,
 				52CFC9212B47F0F0006BA84E /* ContentView.swift in Sources */,
+				52CFC9572B4809E8006BA84E /* BirdsNavigationStack.swift in Sources */,
+				52CFC9502B48098A006BA84E /* PlantRoute.swift in Sources */,
+				52CFC9492B4808F1006BA84E /* Router.swift in Sources */,
+				52CFC94E2B480973006BA84E /* BirdRoute.swift in Sources */,
+				52CFC9542B4809BA006BA84E /* BirdDetailScreen.swift in Sources */,
+				52CFC9592B480A08006BA84E /* BackyardNavigationStack.swift in Sources */,
 				52CFC91F2B47F0F0006BA84E /* ProgrammaticRoutingInSwiftUIForTabViewAppsInSwiftUIApp.swift in Sources */,
+				52CFC94B2B480921006BA84E /* AppScreen.swift in Sources */,
+				52CFC95C2B480A47006BA84E /* AppTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
