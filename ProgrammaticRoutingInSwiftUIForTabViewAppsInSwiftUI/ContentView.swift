@@ -53,12 +53,20 @@ enum PlantRoute {
     case detail
 }
 
+enum BackyardRoute {
+    case home
+    case detail
+}
+
 struct BirdDetailScreen: View {
+    
+    @Environment(Router.self) private var router
+    
     let name: String
     
     var body: some View {
         Button("Bird Photo Screen") {
-            
+            router.birdRoutes.append(.home)
         }
     }
 }
@@ -67,6 +75,7 @@ struct BirdDetailScreen: View {
 class Router {
     var birdRoutes: [BirdRoute] = []
     var plantRoutes: [PlantRoute] = []
+    var backyardRoutes: [BackyardRoute] = []
 }
 
 struct BirdsNavigationStack: View {
