@@ -33,17 +33,63 @@ extension AppScreen {
     var destination: some View {
         switch self {
         case .backyard:
-            Text("Backyards")
+            BackyardNavigationStack()
         case .birds:
-            Text("Birds")
+            BirdsNavigationStack()
         case .plants:
             Text("Plants")
         }
     }
 }
 
+enum BirdRoute: Hashable {
+    case home
+    case detail(String)
+}
+
+struct BirdDetailScreen: View {
+    let name: String
+    
+    var body: some View {
+        Text(name)
+    }
+}
+
+struct BirdsNavigationStack: View {
+    @State private var routes: [BirdRoute] = []
+    
+    var body: some View {
+        NavigationStack(path: $routes) {
+            Button("Go to bird detail") {
+                routes.append(.detail("Sparrow"))
+            }.navigationDestination(for: BirdRoute.self) { route in
+                switch route {
+                case .home:
+                    Text("Home")
+                case .detail(let name):
+                    BirdDetailScreen(name: name)
+                }
+            }
+        }
+    }
+}
+
+struct BackyardNavigationStack: View {
+    var body: some View {
+        NavigationStack {
+            List(1...10, id: \.self) { index in
+                NavigationLink {
+                    Text("Backyard Detail")
+                } label: {
+                    Text("Backyard \(index)")
+                }
+            }.navigationTitle("Backyards")
+        }
+    }
+}
+
 struct AppTabView: View {
-    @Binding var selection: AppScreen
+    @Binding var selection: AppScreen?
     
     var body: some View {
         TabView(selection: $selection) {
@@ -57,8 +103,10 @@ struct AppTabView: View {
 }
 
 struct ContentView: View {
+    @State private var selection: AppScreen? = .backyard
+    
     var body: some View {
-        AppTabView(selection: .constant(.backyard))
+        AppTabView(selection: $selection)
     }
 }
 
